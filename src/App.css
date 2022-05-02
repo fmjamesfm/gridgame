@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+html, body, .app, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-header {
+  height: 58px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  text-align: center;
+  text-transform: uppercase;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.app-main-body{
+  display:flex;
+  flex-direction:column;
+
+  width: 100%;
+  height: calc(100% - var(--header-height));
+
+  margin: 0 auto;
+  max-width: 500px;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app-title{
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.tetris-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  overflow: hidden;
+}
+.tetris-grid {
+  display: grid;
+  
+  justify-content: center;
+  align-items: center;
+  
+
+}
+.grid-cell{
+  display: flex;
+  text-align: center;
+  font-size:28px;
+  border: 1px solid black;
+  height: 2em;
+  width: 2em;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.letter-queue {
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  flex: 0;
+  
+}
+
+.letter-queue-item{
+  display: flex;
+  text-align: center;
+  font-size:18px;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color:azure;
+  height: 2em;
+  width: 2em;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.letter-queue-item-first{
+  background-color:lightpink; 
+  font-size: 22px;
+}
+
+.score-display{
+  text-transform: uppercase;
+  font-size: 40px;
 }
