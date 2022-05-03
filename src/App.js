@@ -12,7 +12,7 @@ probabilities.map((p)=>cumprob.push(cumsum+=p));
 const letters = Object.keys(letterdata);
 
 const dictionary = jsondict.map((item)=>item.word);
-console.log(dictionary);
+
 
 // get letter frequencies for 4 letter words
 
