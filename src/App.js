@@ -11,6 +11,14 @@ const probabilities = Object.values(letterdata);
 probabilities.map((p)=>cumprob.push(cumsum+=p));
 const letters = Object.keys(letterdata);
 
+
+// get letter frequencies for 4 letter words
+
+let dict4 = dictionary.filter((item)=>item.length==4);
+console.log(dict4.length);
+
+
+
 function getRandomLetter(){
 
   let goal = Math.random() * 99.999;
@@ -127,9 +135,9 @@ function App() {
       
       <div className='app-main-body'>
         <div className='rules' style={{textAlign: "center", padding: "10px"}}><p>Click on the grid to add the next letter in the queue.</p><p> Make four letter words horizontally (left to right) or vertically (top to bottom) to score points.</p></div>
-        <div className='letter-queue' style={{gridTemplateColumns: `repeat(${cols}, 1fr)`, gridTemplateRows: `1fr 1fr`}}>{letterQueue.map((item, idx) => <div  className={`letter-queue-item ${(idx==0) ? "letter-queue-item-first": ''}`} key={idx}>{item}</div>)}</div>
+        
       <div className='tetris-container'>
-          
+      <div className='letter-queue' style={{gridTemplateColumns: `repeat(${cols}, 1fr)`, gridTemplateRows: `1fr 1fr`}}>{letterQueue.map((item, idx) => <div  className={`letter-queue-item ${(idx==0) ? "letter-queue-item-first": ''}`} key={idx}>{item}</div>)}</div>  
           <div className='tetris-grid' style={{gridTemplateColumns: `repeat(${cols}, 1fr)`}}>
           {grid.map((row, rown)=> row.map((col, coln)=><div className='grid-cell' onClick={()=>onCellClick(rown, coln)} key={`${rown}${coln}`}> {col} </div>))}
           

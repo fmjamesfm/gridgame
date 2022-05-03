@@ -49,9 +49,11 @@ html, body, .app, #root {
 .tetris-container{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex: 2;
   overflow: hidden;
+  flex-direction: column;
+  
 }
 
 .tetris-grid {
