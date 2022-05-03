@@ -7,10 +7,10 @@ html, body, .app, #root {
   padding: 0;
 }
 
-
 :root{
   --header-height: 70px;
 }
+
 
 .app-header {
   height: var(--header-height);
@@ -19,26 +19,22 @@ html, body, .app, #root {
   text-align: center;
   align-items: center;
   justify-content: center;
-  
   background-color:white;
 }
 
 .app-main-body{
   display:flex;
   flex-direction:column;
-  width: 100%;
-  height: calc(100% - var(--header-height));
-  margin: 0 auto;
   
-  max-width: 500px;
+  height: calc(100% - var(--header-height));
+  font-size: 16px;
+  
   justify-content: center;
   align-items: center;
+
 }
 
 .app-title{
-  position: absolute;
-  left:50%;
-  transform: translate(-50%,0);
   
   font-size: 38px;
     font-weight: 700;
@@ -51,18 +47,13 @@ html, body, .app, #root {
   align-items: center;
   justify-content: flex-start;
   flex: 2;
-  overflow: hidden;
-  flex-direction: column;
-  
+  flex-direction: column; 
 }
 
 .tetris-grid {
   display: grid;
-  
   justify-content: center;
   align-items: center;
-  
-
 }
 
 .grid-cell{
@@ -72,6 +63,7 @@ html, body, .app, #root {
   border: 1px solid black;
   height: 2em;
   width: 2em;
+
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
@@ -81,7 +73,7 @@ html, body, .app, #root {
 
 .letter-queue {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   padding: 15px;
