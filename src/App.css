@@ -19,8 +19,8 @@ html, body, .app, #root {
   text-align: center;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid black;
-  background-color:ghostwhite;
+  
+  background-color:white;
 }
 
 .app-main-body{
