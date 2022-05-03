@@ -25,7 +25,6 @@ return letters[idx];
 
 function initGrid(r,c){
   let arr = [...new Array(r)].map(x=>Array(c).fill(''));
-  console.log(arr);
 return arr;
 }
 
@@ -47,7 +46,7 @@ function App() {
   
   const [rows, setRows] = useState(4);
   const [cols, setCols] = useState(4);
-  const [letterQueue, setLetterQueue] = useState(initQueue(5));
+  const [letterQueue, setLetterQueue] = useState(initQueue(cols+1));
   const [score, setScore] = useState(0);
   const [grid, setGrid] = useState(initGrid(rows, cols));
 
@@ -61,7 +60,6 @@ function App() {
       newgrid[r][c] = letterQueue[0];
       setGrid(newgrid);
       let newQ = [...letterQueue];
-      console.log(letterQueue);
       newQ.shift();
       newQ.push(getRandomLetter());
       setLetterQueue(newQ);
@@ -108,7 +106,7 @@ function App() {
       row.map((item, coln) => {
 
         if (cleanCols.includes(coln)) {
-          item = '';
+          newgrid[rown][coln] = '';
           newscore+= 1.0;
         
         }
@@ -125,11 +123,11 @@ function App() {
     <div className="app">
       <div className='app-header'>
           <div className='app-title'>Grid Game</div>
-
           </div>
-
+      
       <div className='app-main-body'>
-        <div className='letter-queue'>{letterQueue.map((item, idx) => <div className={`letter-queue-item ${(idx==0) ? "letter-queue-item-first": ''}`} key={idx}>{item}</div>)}</div>
+        <div className='rules' style={{textAlign: "center", padding: "10px"}}><p>Click on the grid to add the next letter in the queue.</p><p> Make four letter words horizontally (left to right) or vertically (top to bottom) to score points.</p></div>
+        <div className='letter-queue' style={{gridTemplateColumns: `repeat(${cols}, 1fr)`, gridTemplateRows: `1fr 1fr`}}>{letterQueue.map((item, idx) => <div  className={`letter-queue-item ${(idx==0) ? "letter-queue-item-first": ''}`} key={idx}>{item}</div>)}</div>
       <div className='tetris-container'>
           
           <div className='tetris-grid' style={{gridTemplateColumns: `repeat(${cols}, 1fr)`}}>
