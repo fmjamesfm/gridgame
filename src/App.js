@@ -45,8 +45,8 @@ function checkWord(word){
 
 function App() {
   
-  const [rows, setRows] = useState(5);
-  const [cols, setCols] = useState(5);
+  const [rows, setRows] = useState(4);
+  const [cols, setCols] = useState(4);
   const [letterQueue, setLetterQueue] = useState(initQueue(5));
   const [score, setScore] = useState(0);
   const [grid, setGrid] = useState(initGrid(rows, cols));
@@ -103,16 +103,13 @@ function App() {
     newgrid.map((row, rown)=> {
       if (cleanRows.includes(rown)) {
         row.fill('');
-        newscore+=1;
-
-
-
+        newscore+=rows;
       }
       row.map((item, coln) => {
 
         if (cleanCols.includes(coln)) {
           item = '';
-          newscore+=1;
+          newscore+= 1.0;
         
         }
       })
