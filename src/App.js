@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { useCallback, useEffect, useState } from 'react';
 import letterdata from './letters.json';
-import dictionary from './dict.json';
+import jsondict from './4words.json';
 
 
 let cumsum = 0;
@@ -11,11 +11,10 @@ const probabilities = Object.values(letterdata);
 probabilities.map((p)=>cumprob.push(cumsum+=p));
 const letters = Object.keys(letterdata);
 
+const dictionary = Object.keys(jsondict).map((key)=>jsondict[key]);
+
 
 // get letter frequencies for 4 letter words
-
-let dict4 = dictionary.filter((item)=>item.length==4);
-console.log(dict4.length);
 
 
 
