@@ -73,6 +73,13 @@ function App() {
   const [language, setLanguage] = useState(
     () => {
       // getting stored value
+      const pathname = window.location.pathname.replace('/','')
+
+      if (languages.includes(pathname)) {
+          return pathname;
+      } 
+
+
       const saved = localStorage.getItem("language");
       const initialValue = saved;
       return initialValue || "en";
