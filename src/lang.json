@@ -1,0 +1,19 @@
+{
+    "en":
+    {
+        "p1": "Click on the grid to add the next letter in the queue.",
+        "p2": "Make four letter words horizontally (left to right) or vertically (top to bottom) to score points.",
+        "p3": "Survive as long as you can."
+    },
+    "pl": {
+        "p1": "Click on the grid to add the next letter in the queue.",
+        "p2": "Make four letter words horizontally (left to right) or vertically (top to bottom) to score points.",
+        "p3": "Survive as long as you can."
+
+    },  
+    "it": {
+        "p1": "Clicca su una cella per aggiungere la prossima lettera.",
+        "p2": "Completa parole di quattro lettere in orizzontale (da sinistra) o verticale (dall'alto) per fare punti.",
+        "p3": "Sopravvivi."
+    }   
+}

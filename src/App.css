@@ -30,6 +30,38 @@ html, body, .app, #root {
   background-color:white;
 }
 
+.lang-menu{
+  
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-size: 16px;
+  top: 1%;
+  position: absolute;
+  justify-content: flex-start;
+  align-items: center;
+  left: 5%;
+  text-align: center;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.lang-menu-item {
+    height: 1em;
+  width: 1em;
+  padding: 10px;
+  text-align: center;
+  background-color: pink;
+  border-radius: 5px;
+    border: 1px solid black;
+}
+
 .app-main-body{
   display:flex;
   flex-direction:column;
@@ -59,10 +91,21 @@ html, body, .app, #root {
   flex-direction: column; 
 }
 
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+}
+
 .tetris-grid {
   display: grid;
   justify-content: center;
   align-items: center;
+  
 }
 
 .grid-cell{
@@ -122,4 +165,20 @@ html, body, .app, #root {
   margin: 10px;
   border-radius: 15px;
   color: white;
+}
+
+.game-end-text{
+  font-size: 25px; 
+  padding: 10px;
+}
+
+.restart-button {
+
+  background-color:brown;
+  color: white;
+  font-size: 25px;
+  padding: 25px;
+  border-radius: 10px;
+  font-weight: bold;
+  
 }
