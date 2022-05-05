@@ -110,6 +110,7 @@ function App() {
       setLetterQueue(initQueue(cols+1, language));
       setGrid(initGrid(rows, cols));
       setGameEnd(false);
+      setScore(0);
 
     };
 
